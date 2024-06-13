@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>レスポンシブカレンダー</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レスポンシブカレンダー</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calendar {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .day {
+            width: 14.28%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            text-align: center;
+            cursor: pointer;
+        }
+        .day.circle::after {
+            content: '◯';
+            display: block;
+            color: red;
+        }
+    </style>
 </head>
 <body>
-  <div id="calendar"></div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
+    <div class="calendar" id="calendar">
+        <!-- JavaScriptで日付を生成します -->
+    </div>
+    <script src="calendar.js"></script>
 </body>
 </html>

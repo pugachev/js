@@ -1,37 +1,34 @@
-#calendar {
-    width: 100%; /* レスポンシブ対応 */
-    font-family: sans-serif;
-  }
-  
-  .calendar-header {
-    display: flex; /* 曜日を横並びにする */
-  }
-  
-  .calendar-day {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-  
-  .calendar-day.selected {
-    background-color: #f0f0f0;
-  }
-  
-  .calendar-day.today {
-    font-weight: bold;
-  }
-  
-  .calendar-day:before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin: 5px auto;
-    background-color: transparent; /* 初期状態は非表示 */
-  }
-  
-  .calendar-day.selected:before {
-    background-color: #007bff; /* 選択された日付に丸を表示 */
-  }
-  
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.day, .date {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.day {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.selected {
+  background-color: #8bc34a;
+  color: white;
+  border-radius: 50%;
+}
