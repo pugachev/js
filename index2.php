@@ -45,8 +45,6 @@
         $daysInMonth = date('t', $firstDayOfMonth);
         $firstDayOfWeek = date('w', $firstDayOfMonth);
 
-        echo $firstDayOfMonth.'   '.$daysInMonth.'   '.$firstDayOfWeek;
-
         // 空白を埋める
         for ($i = 0; $i < $firstDayOfWeek; $i++) {
             echo "<div class='date'></div>";
